@@ -1,9 +1,9 @@
 package proyecto;
 
-public class Ejemplo {
+public class main {
 
 	public static void main(String[] args) {
-		System.out.println("hola");
+		// TODO Auto-generated method stub
 
 	}
 
