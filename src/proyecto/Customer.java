@@ -1,11 +1,11 @@
 package proyecto;
 
-public class Cuestoner {
+public class Customer {
 
 	private int id;
 	private String name;
 	private double balance;
-	public Cuestoner(int id, String name, double balance) {
+	public Customer(int id, String name, double balance) {
 		
 		this.id = id;
 		this.name = name;

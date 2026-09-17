@@ -4,7 +4,7 @@ public class Game {
 	
 	 private int id;
 	 private String title;
-	 Genre genre;
+	 private Genre genre;
 	 private double price;
 	 private int stock;
 	 
@@ -71,8 +71,8 @@ public class Game {
 	 public String ObtenerTitulo() {
 		 return title;
 	 }
-	 public  Game() {
-		 return genre;
+	  public Genre obtenerGenero() {
+	        return genre;
 	 }
 	  public int  ObtenerStock() {
 		  return stock;

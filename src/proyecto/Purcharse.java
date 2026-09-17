@@ -4,57 +4,62 @@ public class Purcharse {
 
 	// respentalas compraas quie hacen atraves e nuestra tienda(cliente. juego, copias compra, cuianto se debajop)
 
-	Cuestoner cuestoner;
-	Game game;
-	int quantiy;
-	double totalPrice;
-	
-	public Purcharse(Cuestoner cuestoner, Game game, int quantiy, double totalCompra) {
-		super();
-		this.cuestoner = cuestoner;
-		this.game = game;
-		this.quantiy = quantiy;
-		this.totalPrice = totalPrice*this.game.getPrice();
-	}
+	 private Customer customer;
+	    private Game game;
+	    private int quantity;
+	    private double totalPrice;
 
-	public Cuestoner getCuestoner() {
-		return cuestoner;
-	}
+	    public Purcharse(Customer customer, Game game, int quantity) {
+	        this.customer = customer;
+	        this.game = game;
+	        this.quantity = quantity;
+	        this.totalPrice = quantity * game.getPrice();
+	    }
 
-	public void setCuestoner(Cuestoner cuestoner) {
-		this.cuestoner = cuestoner;
-	}
+	    public Customer getCustomer() {
+	        return customer;
+	    }
 
-	public Game getGeme() {
-		return game;
-	}
+	    public void setCustomer(Customer customer) {
+	        this.customer = customer;
+	    }
 
-	public void setGeme(Game geme) {
-		this.game = game;
-	}
+	    public Game getGame() {
+	        return game;
+	    }
 
-	public int getQuantiy() {
-		return quantiy;
-	}
+	    public void setGame(Game game) {
+	        this.game = game;
+	        calcularPrecioTotal();
+	    }
 
-	public void setQuantiy(int quantiy) {
-		this.quantiy = quantiy;
-	}
+	    public int getQuantity() {
+	        return quantity;
+	    }
 
-	public double getTotalCompra() {
-		return totalCompra;
-	}
+	    public void setQuantity(int quantity) {
+	        this.quantity = quantity;
+	        calcularPrecioTotal();
+	    }
 
-	public void setTotalCompra(double totalCompra) {
-		this.totalCompra = totalCompra;
-	}
+	    public double getTotalPrice() {
+	        return totalPrice;
+	    }
 
-	@Override
-	public String toString() {
-		return "Purcharse [cuestoner=" + cuestoner + ", geme=" + geme + ", quantiy=" + quantiy + ", totalCompra="
-				+ totalCompra + "]";
+	    private void calcularPrecioTotal() {
+	        if (game != null) {
+	            totalPrice = quantity * game.getPrice();
+	        }
+	    }
+
+	    @Override
+	    public String toString() {
+	        return "Purcharse [customer=" + customer
+	                + ", game=" + game
+	                + ", quantity=" + quantity
+	                + ", totalPrice=" + totalPrice + "]";
+	    }
 	}
-	
 	//la compra debera permitir conocer 
 	//	el cliente  que realizo
 	//el video jugo comoprado
@@ -64,4 +69,4 @@ public class Purcharse {
 	//ejemplo si un videoJuegoi cueta 20.00 se comorab 32 unidades
 		
 	
-}
+
