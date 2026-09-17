@@ -1,19 +1,20 @@
 package proyecto;
 
-public class Game {
-	
+public class Juego {
+	 private int contador=1;
 	 private int id;
 	 private String title;
 	 private Genre genre;
 	 private double price;
 	 private int stock;
 	 
-	 public Game(int id, String title, Genre genre, double price, int stock) {
-	
+	 public Juego(int id, String title, Genre genre, double price, int stock) {
+		 
 		  this.title=title;
 		  this.genre=genre;
 		  this.price=price;
 		  this.stock=stock;
+		  id=contador++;
 		 
 		 
 	 } 

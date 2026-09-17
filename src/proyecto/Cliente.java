@@ -1,15 +1,16 @@
 package proyecto;
 
-public class Customer {
-
+public class Cliente {
+	private int contador=1;
 	private int id;
 	private String name;
 	private double balance;
-	public Customer(int id, String name, double balance) {
+	public Cliente(int id, String name, double balance) {
 		
 		this.id = id;
 		this.name = name;
 		this.balance = balance;
+		id=contador++;
 	}
 	public int getId() {
 		return id;
